@@ -14,11 +14,13 @@ let gameMode = "creative";
 const players = [];
 const zombies = [];
 
-// Colors & Emojis
+// Colors & Images
 const COLOR_GRASS = "#228B22";
 const COLOR_DIRT = "#8B4513";
-const EMOJI_P1 = "😼"; // CatNap (Smirking Cat)
-const EMOJI_P2 = "🦖"; // Jumbo Josh (Green Monster/Dino)
+const catnapImg = new Image();
+catnapImg.src = "catnap.jpg";
+const jumboJoshImg = new Image();
+jumboJoshImg.src = "jumbo_josh.png";
 const EMOJI_ZOMBIE = "🧟";
 const EMOJI_HEART = "❤️";
 
@@ -78,7 +80,7 @@ function createPlayers(count) {
             y: 100,
             width: 40, height: 40, 
             vx: 0, vy: 0, 
-            emoji: i === 0 ? EMOJI_P1 : EMOJI_P2, 
+            img: i === 0 ? catnapImg : jumboJoshImg, 
             color: i === 0 ? "red" : "blue",
             speed: 6,
             jumpPower: 14,
@@ -298,7 +300,7 @@ function draw() {
         if (p.invulnerable > 0 && Math.floor(Date.now() / 100) % 2 === 0) {
             // blink
         } else {
-            ctx.fillText(p.emoji, p.x, p.y);
+            ctx.drawImage(p.img, p.x, p.y, p.width, p.height);
         }
 
         if (gameMode === "survival") {
