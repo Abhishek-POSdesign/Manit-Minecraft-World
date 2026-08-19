@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maanit's 2D Minecraft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="mainMenu">
+        <h1>Maanit's Block Sandbox</h1>
+        <p>🎮 Plug in your Cosmic Byte controllers! 🎮</p>
+        
+        <div class="menuRow">
+            <label style="font-size: 24px;">Game Mode: </label>
+            <select id="modeSelect">
+                <option value="creative">Creative (Infinite Blocks, No Danger)</option>
+                <option value="survival">Survival (Collect Blocks, Fight Zombies!)</option>
+            </select>
+        </div>
+
+        <div class="menuRow">
+            <button class="menuBtn" onclick="startGame(1)">1 Player</button>
+            <button class="menuBtn" onclick="startGame(2)">2 Players</button>
+        </div>
+    </div>
+
+    <div id="gameHUD">
+        <button id="btnSave" class="hudBtn" onclick="saveGame()">💾 Save Game</button>
+        <button id="btnRestart" class="hudBtn" onclick="restartGame()">🔄 Restart World</button>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
