@@ -17,8 +17,8 @@ const zombies = [];
 // Colors & Emojis
 const COLOR_GRASS = "#228B22";
 const COLOR_DIRT = "#8B4513";
-const EMOJI_P1 = "🤠";
-const EMOJI_P2 = "👽";
+const EMOJI_P1 = "😼"; // CatNap (Smirking Cat)
+const EMOJI_P2 = "🦖"; // Jumbo Josh (Green Monster/Dino)
 const EMOJI_ZOMBIE = "🧟";
 const EMOJI_HEART = "❤️";
 
